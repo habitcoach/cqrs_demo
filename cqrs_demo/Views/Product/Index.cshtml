@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Product>
+
+    <h2>Product List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.Id">Edit</a> |
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
